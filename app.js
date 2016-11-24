@@ -145,7 +145,7 @@ var sendMail = function(params){
 				};
 				var smtpTransport = mailer.createTransport("SMTP",smtpConfig);
 				
-				var mail = {
+				var mail = { 
 					from: params.name + " <sujit.extentia@gmail.com",// + params.email + ">",
 					to: params.email,//"codemail@extentia.com", //params.email,
 					subject: "Contact Information for MyBrickBot app.",
