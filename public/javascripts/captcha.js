@@ -1,0 +1,1 @@
+jQuery(document).on('click', '#refreshimg', function() { jQuery.post('newsession.php'); jQuery(".image").removeAttr('src'); jQuery(".image").attr('src', 'captcha/image.php?' + $.now());});

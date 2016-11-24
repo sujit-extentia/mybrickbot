@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Home</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-theme.css">
+      <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+      <link rel="icon" href="images/MBBicon.png">
+      <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+		<script type='text/javascript' src="javascripts/captcha.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.validate.js"></script>
+      <script type="text/javascript" src="javascripts/bootstrap.min.js"></script>
+      <script type="text/javascript" src="javascripts/custom.js"></script>
+	  
+	   <script src="https://www.google.com/recaptcha/api.js?onload=myCallBack&render=explicit" async defer></script>
+    <script>
+      var recaptcha1;
+      var recaptcha2;
+      var myCallBack = function() {
+        //Render the recaptcha1 on the element with ID "recaptcha1"
+        recaptcha1 = grecaptcha.render('recaptcha1', {
+          'sitekey' : '6LdkFwwUAAAAAFc8z709QQ0ZShWDquP5PVtdeHs0', //Replace this with your Site key
+          'theme' : 'light'
+        });
+        
+        //Render the recaptcha2 on the element with ID "recaptcha2"
+        recaptcha2 = grecaptcha.render('recaptcha2', {
+          'sitekey' : '6LdkFwwUAAAAAFc8z709QQ0ZShWDquP5PVtdeHs0', //Replace this with your Site key
+          'theme' : 'dark'
+        });
+      };
+    </script>
+   </head>
+   <body class="body">
+        <!-- desktop view mobile -->
+      <nav class="navbar-default navbar-fixed-top desktopVeiw-navbar">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="http://www.extentia.com/" target="_blank">
+               <img src="images/logo.png" class="img-responsive">
+               </a>
+               <!-- <button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+               </button> -->
+            </div>
+            <ul class="nav navbar-nav navbar-collapse navbar-icon pull-right" id="navbar-collapse">
+                <li class="desktopVeiw">
+                    <a href="https://www.facebook.com/Extentia" class="facebookIcon" target="_blank"></a>
+                </li>
+                <li class="desktopVeiw">
+                    <a href="https://twitter.com/Extentia" class="twitterIcon" target="_blank"></a>
+                </li>
+                <li class="desktopVeiw">
+                    <a href="https://www.pinterest.com/extentia/" class="pinterestIcon" target="_blank"></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="customIcon-bar"></span>
+                    </a>
+                    <ul class="nav dropdown-menu custom-navbar">
+                        <li><a href="#homecontainer">Home</a></li>
+                        <li><a href="#featureSection">Features</a></li>
+                        <li><a href="#vedioSection">Videos</a></li>
+                        <li><a href="#newSection">News</a></li>
+                        <li><a href="/feature">Key Features</a></li>
+                        <li><a href="/otherfeature">Other Features</a></li>
+                        <li><a href="/otherskills">Other Skills</a></li>
+                        <li><a href="/availability">Availability</a></li>
+                        <li><a href="#contactSection">Contact Us</a></li>
+                     </ul>
+                </li>
+            </ul>
+       </div>
+      </nav>
+      <!-- desktop view mobile end-->
+
+      <!-- mobile view navbar-->
+      <nav class="navbar-default navbar-fixed-top mobileView-navbar">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="http://www.extentia.com/">
+               <img src="images/logo.png" class="img-responsive">
+               </a>
+               <button type="button" data-toggle="collapse" data-target="#navbar-collapse1" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+               </button>
+            </div>
+            <ul class="nav navbar-nav navbar-collapse collapse navbar-icon pull-right" id="navbar-collapse1">
+                <li><a href="#homecontainer" class="mobileView-link">Home</a></li>
+                <li><a href="#featureSection" class="mobileView-link">Features</a></li>
+                <li><a href="#vedioSection" class="mobileView-link">Videos</a></li>
+                <li><a href="#newSection" class="mobileView-link">News</a></li>
+                <li><a href="/feature" class="mobileView-link">Key Features</a></li>
+                <li><a href="/otherfeature" class="mobileView-link">Other Features</a></li>
+                <li><a href="/otherSkills" class="mobileView-link">Other Skills</a></li>
+                <li><a href="/availability" class="mobileView-link">Availability</a></li>
+                <li><a href="#contactSection" class="mobileView-link">Contact Us</a></li>
+                <li class="mobileVeiw-icon">
+                    <a href="https://www.facebook.com/Extentia" target="_blank">
+                        <div class="facebookIcon"></div>
+                    </a>
+                </li>
+                <li class="mobileVeiw-icon">
+                    <a href="https://twitter.com/Extentia" target="_blank">
+                        <div class="twitterIcon"></div>
+                    </a>
+                </li>
+                <li class="mobileVeiw-icon">
+                    <a href="https://www.pinterest.com/extentia/"  target="_blank">
+                        <div class="pinterestIcon"></div>
+                    </a>
+                </li>
+            </ul>
+       </div>
+      </nav>
+     <!-- mobile view navbar end-->
+
+      <section id="contact-slide">
+          <div class="contact-header">
+              <span class="open-arrow"></span>
+          </div>
+          <div class="contactSlide-form">
+		  <div class="success_mesg">Thank you for contacting with us. We will get back to you soon.</div>
+			<div class="error_mesg" style="display:none;">Error while sendind email. Please try after sometime.</div>
+              <form name="signup" id="signupform" method="post" action="/contact-mail">
+                  <div class="row">
+                      <div class="col-xs-12 form-group">
+                          <input type="text" id="name" name="name" placeholder="Name*" class="form-control">
+                      </div>
+                      <div class="col-xs-12 form-group">
+                          <input type="email" id="email" name="email" placeholder="Email*" class="form-control">
+                      </div>
+                      <div class="col-xs-12 form-group">
+                            <textarea class="form-control" rows="7" id="comments" name="comments" placeholder="Message"></textarea>
+                      </div>
+                      <div class="col-xs-12 form-group">
+                            <div class="row">
+                                <div class="col-xs-5 noPadding">
+                                    <!--a href="" class="form-control refresh-icon" id="refreshimg"></a-->
+                                    <!--<div class="captch-div form-control">
+                                        <img src="images/refreshCaptch.png"  id="refreshimg" alt="Captcha image" class="slider-refresh" />
+                                    </div>-->
+									<div class="col-lg-5 col-sm-5 col-xs-5">
+                                       <!--<img src="captcha/image.php" alt="Captcha image" class="image img-responsive form-control captcha-img">-->
+									   <div id="recaptcha1" class="g-recaptcha" ></div>
+
+                                    </div>
+									<div id="captcha_control_error1" style="color:red;font-size:12px;display:none">Please validate the above captcha</div>
+								 </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 text-center">
+						<div class="response_text error-msg" name="validation_errror" id="validation_errror">Please correct highlighted fields.</div>
+                           <input type="submit" class="btn contactSlide-btn" value="Submit" />
+                            <!--button class="btn contactSlide-btn">Submit</button-->
+                        </div>
+                  </div>
+              </form>
+          </div>
+      </section>
+      <!-- contact slide end -->
+
+
+      <section class="introSection" id="homecontainer">
+         <div class="container">
+            <div class="row">
+				<div id="success-messege" style="font-size:15px;color:green;text-align:center;display:none">Thank you. Please check your email.</div>
+               <div class="col-md-5 col-sm-5 col-xs-12">
+                  <img src="images/legowithshadow.png" class="img-responsive">
+               </div>
+               <div class="col-md-5 col-sm-6 col-xs-12 heading-section">
+                  <h1 class="content-heading content-title">MyBrickbot Skill</h1>
+                    <p class="sectionContent">Do you want to get captivated playing LEGO&reg;? Do you want to be so engrossed that you need not worry about anything but LEGO&reg;?</p>
+                    <p class="sectionContent">Well then, welcome to the world of MyBrickBot! A space where Alexa meets LEGO®. Fans can do anything from finding available sets and themes to managing their Brickeset.com accounts. </p>
+                    <p class="sectionContent">Love LEGO&reg;. Play LEGO&reg;. Speak Alexa. It's a one stop shop for Alexa users who love LEGO&reg;!</p>
+                    <div class="introSection-btn">
+                        <a href="/readmore" class="btn btn-readMore">Read More</a>
+                        <a href="/availability" class="btn btn-downLoad">Download Skill</a>
+                    </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- introSection end -->
+
+      <section class="legoStripDouble"></section>
+      <!-- legoStripDouble end -->
+
+      <section class="featureSection" id="featureSection">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-6 col-xs-12 feature-content">
+                     <h1 class="content-heading content-title">FEATURES</h1>
+                     <ul class="featureList">
+                        <li>Read out all sets available in a user's wish list and own collection</li>
+                        <li>Add and remove sets from a users' Brickset.com account</li>
+                        <li>Read out specifications about any particular set</li>
+                        <li>Read out names of all the themes available on Brickset.com</li>
+                        <li>Provide sub-themes for users' existing themes</li>
+                        <li>Send error messages to unregistered users</li>
+                    </ul>
+                    <div class="feature-btn">
+                       <a href="/feature" class="btn btn-readMore">Read More</a>
+                       <a href="/otherfeature" class="btn btn-readMore">Other Features</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12 feature-img">
+                     <img src="images/Alexa_slide.png" class="img-responsive">
+                  </div>
+               </div>
+            </div>
+      </section>
+      <!-- featureSection end -->
+
+      <section class="vedioSection" id="vedioSection">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-7 col-sm-7 col-xs-12">
+                    <h1 class="videos-heading content-title mobileview-Vedio"> VIDEOS</h1>
+                  <div class="vedioSectionImg">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                           <!-- Wrapper for slides -->
+                            <div class="carousel-inner customCarousel-inner" role="listbox">
+                                <div class="item active embed-responsive embed-responsive-16by9 customCarousal-item">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OBUx331tofA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                                <div class="item embed-responsive embed-responsive-16by9 customCarousal-item">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BAxKfr2R5GA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                              <span class="icon icon-angle-left" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                              <span class="icon icon-angle-right" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                  </div>
+               </div>
+               <div class="col-md-5 col-sm-5 col-xs-12">
+                  <h1 class="videos-heading content-title"> VIDEOS</h1>
+                  <p>Young or old, passionate or just plain curious – the MyBrickbot skill opens up new avenues of adventure for every LEGO® enthusiast. Need a new set? Want to know more about what you are currently making? Let Alexa be your guide as you build fantasy into reality, one brick at a time.Watch our two young LEGO® enthusiasts discuss how MyBrickbot is useful for their needs!</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- vedioSection end -->
+
+
+      <section class="newSection" id="newSection">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12">
+                  <h1 class="news-heading content-title">NEWS</h1>
+               </div>
+               <div class="col-xs-12">
+                    <div id="myCarousel1" class="carousel slide row" data-ride="carousel">
+                        <ol class="carousel-indicators custom-indicators">
+                            <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel1" data-slide-to="1"></li>
+                            <li data-target="#myCarousel1" data-slide-to="2"></li>
+                            <li data-target="#myCarousel1" data-slide-to="3"></li>
+                        </ol>
+                        <div class="carousel-inner newsRes-img" role="listbox">
+                            <div class="content-slider item active">
+                               <div class="col-md-3 col-sm-5">
+                                    <img src="images/newsItem.jpg">
+                                </div>
+                               <div class="col-md-9 col-sm-7 news-para">
+                                  <h4>Lorem Ipusum has been the industry</h4>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo ipsum ac cursus vehicula. Cras eleifend nulla turpis, a condimentum magna sollicitudin nec. Etiam convallis rhoncus risus eget porttitor. Vivamus ut massa vel diam volutpat pretium vel ac orci. Integer ornare, massa nec euismod </p>
+                               </div>
+                            </div>
+                            <div class="content-slider item">
+                               <div class="col-md-3 col-sm-5">
+                                    <img src="images/newsItem.jpg">
+                                </div>
+                               <div class="col-md-9 col-sm-7 news-para">
+                                  <h4>Lorem Ipusum has been the industry</h4>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo ipsum ac cursus vehicula. Cras eleifend nulla turpis, a condimentum magna sollicitudin nec. Etiam convallis rhoncus risus eget porttitor. Vivamus ut massa vel diam volutpat pretium vel ac orci. Integer ornare, massa nec euismod </p>
+                               </div>
+                            </div>
+                            <div class="content-slider item">
+                               <div class="col-md-3 col-sm-5">
+                                    <img src="images/newsItem.jpg">
+                                </div>
+                               <div class="col-md-9 col-sm-7 news-para">
+                                  <h4>Lorem Ipusum has been the industry</h4>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo ipsum ac cursus vehicula. Cras eleifend nulla turpis, a condimentum magna sollicitudin nec. Etiam convallis rhoncus risus eget porttitor. Vivamus ut massa vel diam volutpat pretium vel ac orci. Integer ornare, massa nec euismod </p>
+                               </div>
+                            </div>
+                            <div class="content-slider item">
+                               <div class="col-md-3 col-sm-5">
+                                    <img src="images/newsItem.jpg">
+                                </div>
+                               <div class="col-md-9 col-sm-7 news-para">
+                                  <h4>Lorem Ipusum has been the industry</h4>
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo ipsum ac cursus vehicula. Cras eleifend nulla turpis, a condimentum magna sollicitudin nec. Etiam convallis rhoncus risus eget porttitor. Vivamus ut massa vel diam volutpat pretium vel ac orci. Integer ornare, massa nec euismod </p>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </section>
+      <!-- newSection end -->
+
+      <section class="contactSection" id="contactSection">
+         <div class="container">
+            <div class="row">
+               <div class="col-xs-12 text-center">
+                  <h1 class="contact-heading content-title">CONTACT US</h1>
+                  <p>For more information on extentia, or if you'd like to explore a business opportunity with us:  Write to <a href="mailto:inquiries@extentia.com">inquiries@extentia.com </a>, or contact our office in the conturies listed here. For work opportunity at Extentia, write to <a href="mailto:careers@extentia.com">carees@extentia.com</a></p>
+               </div>
+               <div class="col-xs-12 contact-form"> 
+			    <div class="contact_success_mesg">Thank you for contacting with us. We will get back to you soon.</div>
+				<div class="contact_error_mesg" style="display:none;">Error while sendind email. Please try after sometime.</div>
+                  <form name="contact-form" id="contact-form" method="post" action="contact-mail">
+                     <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                           <div class="row">
+                              <div class="col-xs-12 form-group">
+                                 <input type="text" id="name" name="name" class="form-control input-content" placeholder="Name*">
+                              </div>
+                              <div class="col-xs-12 form-group">
+                                 <input type="text" id="email" name="email" class="form-control input-content" placeholder="Email*">
+                              </div>
+                              <div class="col-xs-12 form-group">
+                                 <input type="text" id="company" name="company" class="form-control input-content" placeholder="Company*">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                           <div class="row">
+                              <div class="col-xs-12 form-group">
+                                 <select class="form-control input-content css-select" placeholder="Country*" id="country" name="country">
+								 <option value="" selected="" style="color: rgb(65, 65, 65);">Select Country</option>
+                                   <option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option>
+										<option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option>
+										<option value="Anguilla">Anguilla</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option>
+										<option value="Armenia">Armenia</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option>
+										<option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option>
+										<option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option>
+										<option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option>
+										<option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option>
+										<option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option>
+										<option value="Bonaire">Bonaire</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+										<option value="Botswana">Botswana</option><option value="Bouvet Island (Bouvetoya)">Bouvet Island (Bouvetoya)</option>
+										<option value="Brazil">Brazil</option><option value="British Indian Ocean Territory (Chagos Archipelago)">British Indian Ocean Territory (Chagos Archipelago)</option>
+										<option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei Darussalam">Brunei Darussalam</option>
+										<option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option>
+										<option value="Burundi">Burundi</option><option value="Canada">Canada</option><option value="Cambodia">Cambodia</option>
+										<option value="Cameroon">Cameroon</option><option value="Cape Verde">Cape Verde</option>
+										<option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option>
+										<option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option>
+										<option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+										<option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option>
+										<option value="Congo">Congo</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option>
+										<option value="Cote d'Ivoire">Cote d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option>
+										<option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Cyprus">Cyprus</option>
+										<option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option>
+										<option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option>
+										<option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option>
+										<option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option>
+										<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option><option value="Faroe Islands">Faroe Islands</option>
+										<option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option>
+										<option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option>
+										<option value="French Southern Territories">French Southern Territories</option><option value="Gabon">Gabon</option>
+										<option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option>
+										<option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option>
+										<option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option>
+										<option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey">Guernsey</option>
+										<option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option>
+										<option value="Haiti">Haiti</option><option value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+										<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option><option value="Honduras">Honduras</option>
+										<option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option>
+										<option value="Iceland">Iceland</option><option value="India">India</option>
+										<option value="Indonesia">Indonesia</option><option value="Iran">Iran</option>
+										<option value="Iraq">Iraq</option><option value="Ireland">Ireland</option>
+										<option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option>
+										<option value="Italy">Italy</option><option value="Jamaica">Jamaica</option>
+										<option value="Japan">Japan</option><option value="Jersey">Jersey</option>
+										<option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kazakhstan">Kazakhstan</option>
+										<option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea">Korea</option>
+										<option value="Korea">Korea</option><option value="Kuwait">Kuwait</option><option value="Kyrgyz Republic">Kyrgyz Republic</option>
+										<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option>
+										<option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option>
+										<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option><option value="Liechtenstein">Liechtenstein</option>
+										<option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macao">Macao</option>
+										<option value="Macedonia">Macedonia</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option>
+										<option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option>
+										<option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option>
+										<option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option>
+										<option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option>
+										<option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option>
+										<option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option>
+										<option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option>
+										<option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="New Caledonia">New Caledonia</option>
+										<option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option>
+										<option value="Nigeria">Nigeria</option><option value="Niue">Niue</option>
+										<option value="Norfolk Island">Norfolk Island</option><option value="Northern Mariana Islands">Northern Mariana Islands</option>
+										<option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option>
+										<option value="Palestinian Territory">Palestinian Territory</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option>
+										<option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Islands">Pitcairn Islands</option>
+										<option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option>
+										<option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option>
+										<option value="Rwanda">Rwanda</option><option value="Saint Barthelemy">Saint Barthelemy</option><option value="Saint Helena">Saint Helena</option>
+										<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Martin">Saint Martin</option>
+										<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+										<option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option>
+										<option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option>
+										<option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option>
+										<option value="Sint Maarten (Netherlands)">Sint Maarten (Netherlands)</option><option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option>
+										<option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option>
+										<option value="South Africa">South Africa</option><option value="South Georgia &amp; S. Sandwich Islands">South Georgia &amp; S. Sandwich Islands</option>
+										<option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option>
+										<option value="Svalbard &amp; Jan Mayen Islands">Svalbard &amp; Jan Mayen Islands</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option>
+										<option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Taiwan">Taiwan</option>
+										<option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option>
+										<option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option>
+										<option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option>
+										<option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="U.S. Virgin Islands">U.S. Virgin Islands</option>
+										<option value="U.S. Minor Outlying Islands">U.S. Minor Outlying Islands</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option>
+										<option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option>
+										<option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Venezuela">Venezuela</option>
+										<option value="Vietnam">Vietnam</option><option value="Wallis and Futuna">Wallis and Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option>
+										<option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option>	
+                                 </select>
+                              </div>
+                              <div class="col-xs-12 form-group">
+                                 <input type="" name="phone" class="form-control input-content" placeholder="Mobile*" id="phone">
+                              </div>
+                              <div class="col-xs-12 form-group">
+                                 <input type="text" name="designation" id="designation" class="form-control input-content" placeholder="Designation">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                           <div class="row">
+                              <div class="col-xs-12 form-group textArea-content">
+                                 <textarea class="form-control textArea-msg input-content" placeholder="Message" name="comments" id="comments"></textarea>
+                              </div>
+                              
+                              <div class="col-xs-12 form-group captcha_control">
+                                 <div class="row">
+                                    <div class="col-lg-5 col-sm-5 col-xs-5">
+                                       <!--<img src="captcha/image.php" alt="Captcha image" class="image img-responsive form-control captcha-img">-->
+									   <div id="recaptcha2" class="g-recaptcha" ></div>
+
+                                    </div>
+                                    <!--<div class="col-lg-5 col-sm-4 col-xs-5 noPadding">                                       
+									    <input class="form-control input-content" type="text" maxlength="6" name="captcha" id="captcha" placeholder="Code*">
+                                    </div>-->
+                                    <!--<div class="col-lg-2 col-sm-3 col-xs-2">
+									   <div class="captch-div form-control footer-captch">
+                                        <img src="images/refreshCaptch.png"  id="refreshimg" alt="Captcha image" class="footer-refresh"/>
+                                    </div>
+                                    </div>-->
+                                 </div>
+								 <div id="captcha_control_error2" style="color:red;font-size:12px;display:none">Please validate the above captcha</div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                 
+               </div>
+
+               <!-- submit button -->
+               <div class="col-xs-12 text-center">
+							<div class="response error-msg" name="response_errror" id="response_errror">Please correct highlighted fields.</div>
+                           <input type="submit" class="btn btn-submit" value="Submit" />                
+               </div>
+			    </form>
+            </div>
+         </div>
+      </section>
+      <!-- contactSection end -->
+      <p class="totop"> 
+            <a href="#top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a> 
+        </p>
+      <section class="footer">
+         <div class="container">
+            <div class="row">
+                  <div class="col-xs-12 text-center">
+                     <p>© 2016 by Extentia Information Technology. All rights reserved.</p>
+                  </div>
+            </div>
+         </div>
+      </section>
+      <!-- footer end -->
+   </boby>
+</html>

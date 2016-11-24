@@ -1,0 +1,45 @@
+﻿
+@media screen and (max-width:1199px){
+	
+}
+@media screen and (max-width:1024px){
+.my-brickbot-text {font-size: 40px;font-weight: 700;}
+.sub-heading {font-size: 18px;font-weight: 300;line-height: 30px;}
+.external-link{font-size: 18px;font-weight: 500;line-height: 30px;}
+}
+@media screen and (max-width:991px){
+  .col-offset-right-3{margin-right:0%;}
+  .my-brickbot-text{margin-top:10%; font-size: 72px;font-weight: 700;}
+  .brickbot-img {height: 275px;margin: 0 auto;}
+  .login-container{ padding: 0px 120px;}
+  .sub-heading {font-size: 30px;font-weight: 300;line-height: 50px; padding:25px 0px;}
+  .external-link{font-size: 30px;font-weight: 500;line-height: 50px;}
+  
+  }
+@media screen and (max-width:767px){
+ .brickbot-img {height: 150px;margin: 0 auto;}
+ .login-container {padding: 0px 50px;}
+ .my-brickbot-text {margin-top: 10%;font-size: 42px;font-weight: 700;line-height: 25px;}
+ .sub-heading {font-size: 18px;font-weight: 300;line-height: 50px;padding: 10px 0px;}
+ .external-link{font-size: 18px;font-weight: 500;line-height: 50px;}
+  form .login-btn{font-size: 18px; line-height: 25px;}
+}
+@media screen and (max-width:480px){
+.logo-image {float: right;height: 30px;max-width: 100%;display: block;}
+.brickbot-img {height: 120px;margin: 0 auto;}
+.my-brickbot-text {margin-top: 5%; font-size: 30px; font-weight: 700; line-height: 25px;}
+.sub-heading {font-size: 14px;font-weight: 300;line-height: 28px;padding: 10px 0px;}
+.external-link{font-size: 14px;font-weight: 500;line-height: 28px;}
+form input[type='email'], form input[type='text'], form input[type='password'] {height: 50px;width: 100%; padding: 10px;}
+.checkbox-checker label{font-size: 12px;}
+.forget-pass-link{font-size:12px;}
+.note-text {font-size: 14px;font-weight: 300;line-height: 50px;}
+.register-link {font-size: 14px;font-weight: 500;line-height: 50px;}
+form .login-btn {font-size: 16px;line-height: 20px;}
+.footer-wrap p{font-size: 11px;}
+}
+@media screen and (max-width: 320px) {
+	.login-container {padding: 0px 20px 100px;}
+	.brickbot-img {height: 100px;margin: 0 auto;}
+	.landing-page-header{padding:12px 15px;}
+}
