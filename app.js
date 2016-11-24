@@ -139,7 +139,7 @@ var sendMail = function(params){
 					port: 25,
 					secure: true, // use SSL
 					auth: {
-						user: "sujit.extentia@gmail.com",
+						user: "sujit.extentia@gmail.com", 
 						pass: "ext123!@#"
 					}
 				};
