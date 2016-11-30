@@ -12,7 +12,7 @@ header('Cache-control: no-cache');
 
 // Create an image from button.png
 $image = imagecreatefrompng('button.png');
-/*
+
 // Set the font colour
 //$colour = imagecolorallocate($image, 183, 178, 152);
 $colour = imagecolorallocate($image, 0, 0, 0);
@@ -24,9 +24,9 @@ $font = 'fonts/Anorexia.ttf';
 $rotate = rand(-15, 15);
 
 // Create an image using our original image and adding the detail
-imagettftext($image, 14, $rotate, 18, 30, $colour, $font, $str);*/
+imagettftext($image, 14, $rotate, 18, 30, $colour, $font, $str);
 
 // Output the image as a png
 imagepng($image);
-//echo "HELLO"
+
 ?>

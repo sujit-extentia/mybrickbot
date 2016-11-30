@@ -1,4 +1,4 @@
-
+﻿
 jQuery.validator.addMethod("charonly", function (value, element) {
         return this.optional(element) || /^[a-z]+$/i.test(value);
 }, "");
@@ -9,6 +9,68 @@ jQuery.validator.addMethod("numonly", function (value, element) {
 		
 		
 $(document).ready(function(){
+
+    $('#myCarousel').carousel({
+    interval: false,
+      wrap: false
+    })
+    
+    $('#myCarousel').on('slid.bs.carousel', function() {
+        //alert("slid");
+    });
+  
+  
+  $('#myCarousel').on('slid.bs.carousel', '', function() {
+  var $this = $(this);
+
+  $this.children('.carousel-control').show();
+
+  if($('.carousel-inner .item:first').hasClass('active')) {
+    $this.children('.left.carousel-control').hide();
+  } else if($('.carousel-inner .item:last').hasClass('active')) {
+    $this.children('.right.carousel-control').hide();
+  }
+
+  });
+
+
+  //Youtube
+jQuery(function ($) {
+        $('div.carousel-inner div.active').attr('id', 'current');
+    
+      $(".carousel-control").click(function() {
+          callPlayer('current','pauseVideo');
+      });
+    });
+
+    function callPlayer(frame_id, func, args='') {
+        
+        if (window.jQuery && frame_id instanceof jQuery) frame_id = frame_id.get(0).id;
+        var iframe = document.getElementById(frame_id);
+        if (iframe && iframe.tagName.toUpperCase() != 'IFRAME') {
+            iframe = iframe.getElementsByTagName('iframe')[0];
+        }
+        if (iframe) {
+            iframe.contentWindow.postMessage(JSON.stringify({
+                "event": "command",
+                "func": func,
+                "args": args || [],
+                "id": frame_id
+            }), "*");
+        }
+
+        jQuery(function ($) {
+            $('div.carousel-inner div.item').attr('id', '');
+            $('div.carousel-inner div.active').attr('id', 'current');
+        });
+    }
+
+//Youtube end
+  
+
+
+
+
 	$(".contact-header").click(function(){
 		$(".contactSlide-form").toggle();
 		$(".contact-header span").toggleClass("close-arrow");
@@ -45,7 +107,7 @@ $(document).ready(function(){
                         required: true,
                         email: true
                     },
-                    captcha: { required: true, remote: "captcha/process.php" }
+                    //captcha: { required: true, remote: "captcha/process.php" }
 
 
                 },
@@ -56,7 +118,7 @@ $(document).ready(function(){
                         email: ""
                     },
 
-                    captcha: { remote: "Please correct highlighted fields" }
+                    //captcha: { remote: "Please correct highlighted fields" }
 
                 },
         errorPlacement: function(error, element) {
@@ -68,7 +130,8 @@ $(document).ready(function(){
         submitHandler: function(form) {
 		    jQuery('.loader1').show();
 			var submitForm = form;
- 
+			var params = $("#signupform").serialize();
+			params.form = "signup";
                         /*var name = jQuery("#signupform #name").val();
 						var email = jQuery("#signupform #email").val();
                         //var company = jQuery("#signupform #company").val();
@@ -83,7 +146,7 @@ $(document).ready(function(){
                             url: "/contact-mail",
                             type: "POST",
 							dataType: "json",
-                            data: $("#signupform").serialize(),
+                            data: params,//$("#signupform").serialize(),
                             success: function(data) {
 								console.log("data>>");
 								console.log(data);
@@ -95,9 +158,10 @@ $(document).ready(function(){
 									//Refresh aptch once mail send
 									$('#refreshimg').trigger( "click" );
 									jQuery("#response_errror").css('display','none');*/
-									window.location.href = window.location.href + "?contact-us-success";
-									if(queryString.indexOf("contact-us-success") > -1) 
-										$("#success-messege").show();
+									//window.location.href = window.location.href + "?#contact-us-success";
+									//if(queryString.indexOf("contact-us-success") > -1) 
+										$("#success-messege1").show();
+										$(".error-msg").hide();
 							        return true;
                                 } else {
 									/*jQuery(".contact_error_mesg").css("display", "block");
@@ -149,7 +213,7 @@ $(document).ready(function(){
 						minlength:"",
 						maxlength:""
 					},
-                    captcha: { remote: "Please correct highlighted fields" }
+                    //captcha: { remote: "Please correct highlighted fields" }
 
                 },
         errorPlacement: function(error, element) {
@@ -162,25 +226,27 @@ $(document).ready(function(){
 		    jQuery('.loader1').show();
 			//var submitForm = form;
 			//var queryStringCaptcha = 'captcha='+jQuery("#contact-form #captcha").val();
-            
-                        var name = jQuery("#contact-form #name").val();
+            //console.log("here>>>");
+                        /*var name = jQuery("#contact-form #name").val();
 						var email = jQuery("#contact-form #email").val();
                         var company = jQuery("#contact-form #company").val();
 						var country = jQuery("#contact-form #country").val();
 						var phone = typeof(jQuery("#contact-form #phone").val()) !== "undefined" && jQuery("#contact-form #phone").val() ? jQuery("#contact-form #phone").val() : '';
 						var designation = jQuery("#contact-form #designation").val();                        
-                        var comment = typeof(jQuery("#contact-form #comments").val()) !== "undefined" && jQuery("#contact-form #comments").val() ? jQuery("#contact-form #comments").val() : '';
+                        var comment = typeof(jQuery("#contact-form #comments").val()) !== "undefined" && jQuery("#contact-form #comments").val() ? jQuery("#contact-form #comments").val() : '';*/
+						var params = $("#contact-form").serialize();
 						
+						//return false;
 						/*var queryStringDetails = 'name=' + name + '&email=' + email + '&company=' + company + '&country=' + country + '&phone='+ phone +'&designation='+ designation +'&comment=' + comment;
                         */
 						jQuery.ajax({
                             url: "/contact-mail",
                             type: "POST",
 							dataType: "json",
-                            data: $("#contact-form").serialize(),
+                            data: params,
                             success: function(data) {
-								console.log("data>>");
-								console.log(data);
+								/*console.log("data>>");
+								console.log(data);*/
                                 jQuery('.loader1').hide();
                                 if (data.success) {
                                     /*jQuery('.contact_success_mesg').css("display", "block");
@@ -189,9 +255,10 @@ $(document).ready(function(){
 									//Refresh aptch once mail send
 									$('#refreshimg').trigger( "click" );
 									jQuery("#response_errror").css('display','none');*/
-									window.location.href = window.location.href + "?contact-us-success";
-									if(queryString.indexOf("contact-us-success") > -1) 
+									//window.location.href = window.location.href + "?#contact-us-success";
+									//if(queryString.indexOf("contact-us-success") > -1) 
 										$("#success-messege").show();
+										$(".error-msg").hide();
 							        return true;
                                 } else {
 									/*jQuery(".contact_error_mesg").css("display", "block");
@@ -212,7 +279,38 @@ $(document).ready(function(){
 	if(queryString.indexOf("contact-us-success") > -1) 
 		$("#success-messege").show();
 		
+	//Function to Add Country List Using Api
+
+function addOptions(){
+            $.getJSON( "data/country.json", function( data ) {  
+			console.log("Data>>", data);
+			
+			var countryList = data;
+			
+            var data =countryList.RestResponse.result;
+                
+            //console.log("Country List", data.length);
+            var select = document.getElementById('country');
+            //console.log("Select",select);
+            var option;
+            //select.innerHTML ="Country";
+    
+            for (var i = 0; i < data.length; i++) {
+              option = document.createElement('option');
+              option.text = option.value = data[i].name;
+              //console.log(data[i].name);
+              select.appendChild(option);
+            }
 	
+		});
+            
+            
+        }
+
+
+//window.onload = function() {
+  addOptions();
+//};
 });
 
 

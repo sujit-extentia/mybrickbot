@@ -71,7 +71,7 @@ app.post('/contact-mail', function(req, res, next){
 		//console.log("recaptcha1 after encode>>" + encodeURIComponent(recaptcha1));
 		
 		request.get(
-			'https://www.google.com/recaptcha/api/siteverify?secret=6LdkFwwUAAAAAOLphlcVj8Wleg0nxMMU6j25jVnq&response=' + encodeURIComponent(recaptcha1),
+			'https://www.google.com/recaptcha/api/siteverify?secret=6LfyTAwUAAAAAOrYK-uJ7bkIKLe-N73un1tAoSNm&response=' + encodeURIComponent(recaptcha1),
 			
 			function (error, response, body) {
 				if(error) {
@@ -121,34 +121,43 @@ var sendMail = function(params){
 		try{
 			var mailer = require("nodemailer");
 			var fs = require("fs");
-			fs.readFile("public/templates/contact_us_email_body.html", function(err, data){
+			var templateFilePath = "public/templates/sign_up_email_body.html";
+			if(params.form_name != undefined && params.form_name == "contact-form")
+				templateFilePath = "public/templates/contact_us_email_body.html";
+			
+			fs.readFile(templateFilePath, function(err, data){
 				if(err) {
 					console.log("Error while reading template>>", err);
 				}
 				var emailBody = data.toString();
-				//console.log("emailBody>>");
-				//console.log(emailBody);
 				emailBody = emailBody.replace("#name", params.name);
 				emailBody = emailBody.replace("#email", params.email);
 				emailBody = emailBody.replace("#comments", params.comments);
 				
+				if(params.form_name != undefined && params.form_name == "contact-form") {
+					emailBody = emailBody.replace("#country", params.country);
+					emailBody = emailBody.replace("#phone", params.phone);
+					emailBody = emailBody.replace("#designation", params.designation);
+					emailBody = emailBody.replace("#company", params.company);
+				}
+				
 				
 				// Use Smtp Protocol to send Email
 				var smtpConfig = {
-					host: 'smtp.gmail.com',
+					host: 'mail.extentia.com',
 					port: 25,
 					secure: true, // use SSL
 					auth: {
-						user: "sujit.extentia@gmail.com", 
-						pass: "ext123!@#"
+						user: "codemail@extentia.com",
+						pass: "$#codeauth261"
 					}
 				};
 				var smtpTransport = mailer.createTransport("SMTP",smtpConfig);
 				
 				var mail = { 
-					from: params.name + " <sujit.extentia@gmail.com",// + params.email + ">",
-					to: params.email,//"codemail@extentia.com", //params.email,
-					subject: "Contact Information for MyBrickBot app.",
+					from: "MybrickBot Contact Us <info@mybrickbot.com",// + params.email + ">",
+					to: "mybrickbot@yopmail.com",//"aj.extentia@gmail.com", //params.email,
+					subject: "Contact Information for MyBrickBot Alexa app.",
 					text: "We have received following contact-us request.",
 					html: emailBody//"<b>Hope to have a nice relation with you.</b>"
 				}

@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title> MyBrickBot |Home Page </title>
+    <title> MyBrickBot | Home Page </title>
 
 
     <!-- Bootstrap -->
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/font-awesome.min.css" rel="stylesheet">
-    <link href="stylesheets/style1.css" rel="stylesheet">
-    <link href="stylesheets/responsive.css" rel="stylesheet">
-
+    <link href="stylesheets/style-signup.css" rel="stylesheet">
+    <link href="stylesheets/responsive.css" rel="stylesheet">   
+    <link rel="icon" href="images/MBBicon.jpg">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,48 +30,53 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-<body>
-   <div class="container">
-       <div class="row">
-           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 landing-page-header">
-               <a href="http://www.extentia.com/" target="_blank" style="outline:none; border:none;"><img src="images/E logo.png" alt="extentia_logo" class="logo-image"/></a>
-           </div>
-       </div>
-       <div class="row">
-           <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
-               <div class="col-md-offset-2 col-md-3  col-sm-12 brickbot-container">
-                  <img src="images/BB.png" alt="brickbot" class="img-responsive brickbot-img"/>
-               </div>
-               <div class="col-offset-right-3 col-md-4 col-sm-12 login-container">
-                   <form action="/api/login" class="form-login" role="form" id="new_user">
-                       
-             <h2 class="my-brickbot-text">MyBrickBot</h2>
-                        <p class="sub-heading">Login to your <a href="http://brickset.com/" class="external-link" title="brickset-site" target="_blank"> Brickset.com </a>account</p>
-                        <small id="errorMsgId" class="help-block"></small>
-                       <input class="form-control" id="user_email" name="user_email" placeholder="Email" required="" autofocus="" type="email" >
-           
-                       <input class="form-control" id="user_password" name="user_password"  placeholder="Password" required="" type="password" >
-            <button class="btn btn-lg btn-primary btn-block login-btn " type="submit"> LOGIN </button>
-             <p class="signup">Not a Brickset.com user? <a href="javascript:void(0)" id="nouser_button" target="_blank" class="external-link-signup" title="Sign up now!">Click here</a> to continue!<br /><span>(Non Brickset.com members will not have access to all the 'MyBrickBot' features)</span></p>
-                   </form>
-               </div>
-           </div>
-       </div>
-   </div>
-   <footer class="footer-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
-                        <p> © 2016 <a href="http://www.extentia.com/" target="_blank" style="outline:none; border:none;">Extentia Information Technology.</a> All rights reserved.</p>
+<body class="signup-body">
+    <section class="signup-section">
+        <div class="sign-container container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-3 col-sm-offset-1 col-sm-3">
+                    <img src="images/legowithshadow.png" class="img-responsive leftSide-img">
+                </div>
+                <div class="col-md-6 signup-form text-center col-sm-7">
+                    <img src="images/WebLogo_Text.png" class="img-responsive">
+                    <div class="form-section">
+						<form action="/api/login" class="form-login" role="form" id="new_user">
+							<h4 class="signup-heading">Login to your <a href="https://mybrickbot.com/" target="_blank">Brickset.com</a> account</h4>
+							<div class="form-group signup-formgroup">
+								<input type="text" name="user_email" class="form-control input-content" placeholder="Email" id="user_email" required="" autofocus="">
+							</div>
+							<div class="form-group signup-formgroup">
+								<input type="password" name="user_password" id="user_password" class="form-control input-content" placeholder="Password" required="">
+							</div>
+							<div class="form-group loginBtn-div">
+								<button class="login-btn btn-block form-control" type="submit">Login</button>
+							</div>
+							<div>
+								<h4 class="click-link">Not a Brickset.com user? <a href="https://mybrickbot.com/" target="_blank">Click here</a> to continue!</h4>
+								<p>(Non Brickset.com members will not have access to all the 'MyBrickBot' features)</p>
+							</div>
+						</form>
                     </div>
                 </div>
             </div>
-  </footer>
+        </div>
+   </section>
+   
+   <section class="footer">
+        <section class="legoStripDouble"></section>
+         <div class="container">
+            <div class="row">
+                  <div class="col-xs-12 text-center">
+                     <p>© 2016 by <a href="http://www.extentia.com/" target="_blank">Extentia Information Technology</a>. All Rights Reserved.</p>
+                  </div>
+            </div>
+         </div>
+      </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <script src="javascripts/client.js"></script>
 	
